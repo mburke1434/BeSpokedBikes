@@ -9,3 +9,5 @@ class Product {
         this.commissionPercentage = comm
     }
 }
+
+export default Product

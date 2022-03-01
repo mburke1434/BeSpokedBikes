@@ -1,8 +1,16 @@
-class Discount {
-    constructor(pro, begin, end, per) {
-        this.product = pro
-        this.beginDate = begin
-        this.endDate = end
-        this.percentage = per
+import React from "react"
+
+class Discount extends React.Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            product: "",
+            beginDate: "",
+            endDate: "",
+            percentage: "",
+        }
+
     }
 }
+
+export default Discount

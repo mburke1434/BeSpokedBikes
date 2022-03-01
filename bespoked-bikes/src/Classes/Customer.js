@@ -1,9 +1,16 @@
-class Customer {
-    constructor(fnm, lnm, addr, ph, start) {
-        this.firstName = fnm
-        this.lastName = lnm
-        this.address = addr
-        this.phone = ph
-        this.startDate = start
+import React from "react"
+
+class Customer extends React.Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            firstName: "",
+            lastName: "",
+            address: "",
+            phone: "",
+            startDate: "",
+        }
     }
 }
+
+export default Customer

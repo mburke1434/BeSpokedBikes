@@ -1,0 +1,58 @@
+{
+    "products": [
+        {
+            "name": "Headlight Fluid",
+            "manufacturer": "Mediocre Auto Parts",
+            "style": "Stylish?",
+            "puchasePrice": 0.10,
+            "salePrice": 1.00,
+            "quantityOnHand": 36,
+            "commissionPercentage": 0.05
+        }
+    ],
+    "salespeople": [
+        {
+            "firstName": "John",
+            "lastName": "Doe",
+            "address": "1234 Anywhere St",
+            "phone": "1234567890",
+            "startDate": "01/02/2003",
+            "terminationDate": "04/05/2006",
+            "manager": "Manajohn Gerald"
+        },
+        {
+            "firstName": "Joe",
+            "lastName": "Schmoe",
+            "address": "1234 Wherever Ave",
+            "phone": "0987654321",
+            "startDate": "11/25/1999",
+            "terminationDate": "02/02/2022",
+            "manager": "Manajohn Gerald"
+        }
+    ],
+    "customers": [
+        {
+            "firstName": "Jane",
+            "lastName": "Doe",
+            "address": "1234 Anywhere St",
+            "phone": "4044044004",
+            "startDate": "04/08/2021"
+        }
+    ],
+    "sales": [
+        {
+            "product": "Headlight Fluid",
+            "salesperson": "Elbo Gris",
+            "customer": "Jane Doe",
+            "saleDate": "06/06/2021"
+        }
+    ],
+    "discounts": [
+        {
+            "product":"Headlight Fluid",
+            "beginDate": "05/07/2021",
+            "endDate": "05/07/2025",
+            "discountPercentage": 0.20
+        }
+    ]
+}

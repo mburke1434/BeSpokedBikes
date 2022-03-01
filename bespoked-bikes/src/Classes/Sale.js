@@ -6,3 +6,5 @@ class Sale {
         this.saleDate = saleDat
     }
 }
+
+export default Sale
