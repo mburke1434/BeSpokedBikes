@@ -12,6 +12,19 @@ class Customer extends React.Component {
             startDate: this.props.startDate,
         }
     }
+
+    render() {
+        return(
+            <div>
+                <h3>{this.state.firstName + " " + this.state.lastName}</h3>
+                <ul>
+                    <li>Address: {this.state.address}</li>
+                    <li>Phone: {this.state.phone}</li>
+                    <li>Customer Since: {this.state.startDate}</li>
+                </ul>
+            </div>
+        )
+    }
 }
 
 export default Customer

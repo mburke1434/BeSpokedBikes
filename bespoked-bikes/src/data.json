@@ -6,7 +6,7 @@
             "style": "Stylish?",
             "puchasePrice": 0.10,
             "salePrice": 1.00,
-            "quantityOnHand": 36,
+            "quantity": 36,
             "commissionPercentage": 0.05
         }
     ],

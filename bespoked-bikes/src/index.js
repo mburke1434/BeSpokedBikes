@@ -2,14 +2,20 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './Displays/App';
+import ProductDisplay from './Displays/ProductDisplay';
 import SalespersonDisplay from "./Displays/SalespersonDisplay"
+import CustomerDisplay from './Displays/CustomerDisplay'
+import SalesDisplay from './Displays/SalesDisplay'
 import DiscountDisplay from "./Displays/DiscountDisplay"
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
     {/* <App /> */}
+    <ProductDisplay />
     <SalespersonDisplay />
+    <CustomerDisplay />
+    <SalesDisplay />
     <DiscountDisplay />
   </React.StrictMode>,
   document.getElementById('root')
