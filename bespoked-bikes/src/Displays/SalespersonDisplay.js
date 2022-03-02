@@ -1,5 +1,5 @@
 import React from "react"
-import Salesperson from "./Classes/Salesperson.js"
+import Salesperson from "../Classes/Salesperson.js"
 
 class SalespersonDisplay extends React.Component {
     constructor(props) {
@@ -10,13 +10,13 @@ class SalespersonDisplay extends React.Component {
     }
 
     render() {
-        let data = require("./data.json")
+        let data = require("../data.json")
         console.log(data.salespeople)
         return(
             <div className="SalespersonDisplay">
                 <header className="Salesperson-header">
                     <h2>Salespeople: </h2>
-                    {data.salespeople.map((element, index) => {
+                    {data.salespeople.map((element, index)=> {
                         return (<div>
                             <Salesperson
                             key={index}

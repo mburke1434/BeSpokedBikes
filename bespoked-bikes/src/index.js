@@ -1,14 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import SalespersonDisplay from "./SalespersonDisplay"
+import App from './Displays/App';
+import SalespersonDisplay from "./Displays/SalespersonDisplay"
+import DiscountDisplay from "./Displays/DiscountDisplay"
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
     {/* <App /> */}
     <SalespersonDisplay />
+    <DiscountDisplay />
   </React.StrictMode>,
   document.getElementById('root')
 );
