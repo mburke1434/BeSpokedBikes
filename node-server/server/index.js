@@ -10,7 +10,7 @@ var data = {
     "products": [
         {
             "id": 0,
-            "name": "Headlight Fluid",
+            "name": "Window Washing Fluid",
             "manufacturer": "Mediocre Auto Parts",
             "style": "Stylish?",
             "puchasePrice": 0.10,
@@ -31,7 +31,7 @@ var data = {
             "manager": "Manajohn Gerald"
         },
         {
-            "id": 0,
+            "id": 1,
             "firstName": "Joe",
             "lastName": "Schmoe",
             "address": "1234 Wherever Ave",
@@ -81,6 +81,11 @@ app.get("/api", (request, response) => {
 
 app.get("/api/products", (request, response) => {
     response.json(data.products)
+})
+
+app.post("/api/products", (request, response) => {
+    //Take request data, update var data
+    data.products[request.unique_id] = request.data
 })
 
 app.get("/api/salespeople", (request, response) => {

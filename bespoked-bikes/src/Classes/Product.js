@@ -13,25 +13,38 @@ const Product = (props) => {
     const [commissionPercentage, setCommissionPercentage] = useState(props.commissionPercentage)
     // const [editing, setEditing] = useState(false)
 
-    // const updateData = () => {
-    //     setEditing(false)
-    //     //TODO update database based on current state
-    //     // const newData = {
-    //     //     "id": id,
-    //     //     "name": name,
-    //     //     "manufacturer": manufacturer,
-    //     //     "style": style,
-    //     //     "purchasePrice": purchasePrice,
-    //     //     "salePrice": salePrice,
-    //     //     "quantity": quantity,
-    //     //     "comissionPercentage": commissionPercentage
-    //     // }
-    //     // fetch('http://localhost:3001/api/products', {
-    //     //     method: 'PUSH',
-    //     //     mode: 'no-cors',
-    //     //     data: newData
-    //     // })
-    // }
+    const fetchData = () => {
+        fetch('http://localhost:3001/api/products', {
+            method: 'GET',
+        }).then(response => {
+            response.json().then(data => {
+                console.log(data)
+                setName(data[0].name)
+            })
+        }).catch(error => {
+            console.log("Error :" + error)
+        })
+    }
+
+    const updateData = () => {
+        // setEditing(false)
+        //TODO update database based on current state
+        const newData = {
+            "id": id,
+            "name": name,
+            "manufacturer": manufacturer,
+            "style": style,
+            "purchasePrice": purchasePrice,
+            "salePrice": salePrice,
+            "quantity": quantity,
+            "comissionPercentage": commissionPercentage
+        }
+        fetch('http://localhost:3001/api/products', {
+            method: 'PUSH',
+            mode: 'no-cors',
+            data: newData
+        })
+    }
 
     // console.log(editing)
     return (
@@ -43,9 +56,9 @@ const Product = (props) => {
             Sale Price: $<EditText value={salePrice} onChange={setSalePrice} inline /><br />
             Quantity: <EditText value={quantity} onChange={setQuantity} inline /><br />
             Commission Percentage: <EditText value={commissionPercentage*100} onChange={setCommissionPercentage} inline />%<br />
-            {/* <form>
-                <input type="submit" value="Update" onClick={updateData} />
-            </form> */}
+            <form>
+                <input type="button" value="Fetch" onClick={fetchData} />
+            </form>
         </div>
         // :
         // <div>
